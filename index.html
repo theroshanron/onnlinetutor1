@@ -1,13 +1,627 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roshan Chaudhary • Computer Basics Tutor</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Chaudhary - Digital Skills Trainer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        xintegrity="sha512-iecdLp3G8kM61lX4j6n5B1p5k8T6p8T3QWJ51Tqg2u5M5R5j5v5N5V5F5E5S5D5E5Q5E5R5Y5X5E5P5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>
-<h1>Roshan Chaudhary • Computer Basics Tutor</h1>
-<p>Welcome to my portfolio and curriculum site.</p>
+
+<body class="text-[#073B4C]">
+
+    <header class="sticky top-0 z-50 bg-[#118AB2] text-white shadow-lg py-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <div class="text-xl font-bold mb-4 md:mb-0">Roshan Chaudhary</div>
+            <nav class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-sm md:text-base">
+                <a href="#about-me" class="hover:text-[#FFD166] transition-colors duration-200">About Me</a>
+                <a href="#curriculum" class="hover:text-[#FFD166] transition-colors duration-200">Curriculum</a>
+                <a href="#portfolio" class="hover:text-[#FFD166] transition-colors duration-200">Portfolio</a>
+                <a href="https://calendly.com/theroshanron" class="hover:text-[#FFD166] transition-colors duration-200"
+                    target="_blank">Book a Class</a>
+            </nav>
+            <div class="flex items-center mt-4 md:mt-0 space-x-3">
+                <a href="https://meet.google.com/owi-nsdc-ric"
+                    class="bg-[#FFD166] text-[#073B4C] font-semibold py-2 px-4 rounded-full text-sm hover:bg-[#FF6B6B] transition duration-300"
+                    target="_blank">Join Google Meet</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <section id="about-me" class="card text-center max-w-4xl mx-auto p-8 mb-12">
+            <h2 class="text-3xl font-bold text-[#FF6B6B] mb-4">About Me</h2>
+            <p class="text-gray-600 mb-6 max-w-3xl mx-auto">As an Ad-tech solution consultant with nearly eight years of
+                specialized experience in the Ad-tech and Mar-tech sectors, I am passionate about simplifying complex
+                technical concepts. My primary focus is on delivering exceptional results for clients and stakeholders
+                through effective campaign integration, optimization, and monitoring. In addition to my professional
+                responsibilities, I am pursuing an EPGP MBA at IIM Kozhikode (2023-2025), reflecting my commitment to
+                continuous learning and staying ahead of industry trends while developing strategic leadership skills.
+                My technical expertise encompasses the implementation and integration of Ad-tech products, along with
+                troubleshooting, automation, and scripting using languages such as Python, JavaScript, CSS, alongside
+                SDKs and REST APIs. This curriculum is designed to transfer my passion and expertise to a new audience,
+                helping you build confidence and thrive in the digital world.</p>
+        </section>
+
+        <section id="portfolio" class="card text-center max-w-4xl mx-auto p-8 mb-12">
+            <h2 class="text-3xl font-bold text-[#118AB2] mb-4">My Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-6">
+                <div>
+                    <h3 class="text-2xl font-bold text-[#FFD166] mb-2">Work Experience</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold text-lg">Senior Technical Solution Engineer at dunnhumby</p>
+                            <p class="text-gray-500">May 2025 - Present</p>
+                            <p>Delivering exceptional results for clients and stakeholders through effective campaign
+                                integration, optimization, and monitoring. Pursuing an EPGP MBA at IIM Kozhikode
+                                (2023-2025).</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-lg">Technical Account Manager at RTB House</p>
+                            <p class="text-gray-500">November 2023 - April 2025</p>
+                            <p>Managed and optimized advertiser campaigns, tags, and reports. Provided dedicated support
+                                and consultation to clients, and championed cookieless strategies.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-lg">Senior Implementation Specialist at Taboola</p>
+                            <p class="text-gray-500">August 2019 - September 2021</p>
+                            <p>Implemented and tested Taboola products, assisted publishers with integrations, and
+                                managed projects to improve revenue and efficiency.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-lg">Frontend Developer at Cyber Peace Foundation</p>
+                            <p class="text-gray-500">May 2016 - July 2016</p>
+                            <p>Developed an Android application with the team to raise awareness about cybercrime and
+                                assisted victims. Also created a portfolio website using WordPress, HTML, CSS, and PHP.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#FFD166] mb-2">Key Projects & Awards</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold text-lg">Academic Calendar Exporter</p>
+                            <p class="text-gray-500">A Flask-based web application to streamline the generation of
+                                academic calendars from Excel files.</p>
+                            <p>Created a user-friendly application that allows users to upload academic schedules,
+                                select specific subjects, and generate `.ics` files compatible with Google Calendar and
+                                other applications. Ensures seamless updates to existing schedules by leveraging unique
+                                identifiers for events.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-lg">India Fights Cybercrime App</p>
+                            <p class="text-gray-500">An Android application for Cyber Peace Foundation.</p>
+                            <p>Developed an Android application with a team to raise awareness about cybercrime and
+                                assist victims. The app provides users with safety tips, guidelines, and other
+                                educational materials to help them stay safe.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-lg">Employee Recognition for Q1 2021</p>
+                            <p class="text-gray-500">Awarded by Taboola</p>
+                            <p>Received a gift and a certificate for outstanding achievements in multiple initiatives
+                                such as Sangyan, EY Audit, and bulk management, demonstrating professionalism,
+                                dedication, and commitment.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculum" class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#118AB2] mb-8">Course Curriculum</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">A comprehensive 3-month curriculum designed to
+                build your digital skills from the ground up, with a clear focus on practical, real-world application.
+            </p>
+
+            <div class="card p-6">
+                <h3 class="text-2xl font-bold text-[#FF6B6B] mb-4">Demo Class: Getting Started (30 Minutes)</h3>
+                <ul class="space-y-4 text-gray-700 list-none">
+                    <li class="flex items-start">
+                        <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                        <div>
+                            <p class="font-semibold">Friendly Introduction</p>
+                            <p class="text-gray-500">Setting a welcoming tone and discussing individual goals.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                        <div>
+                            <p class="font-semibold">Anatomy of a Laptop</p>
+                            <p class="text-gray-500">Identifying the physical parts like the keyboard, touchpad, screen,
+                                and power button.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                        <div>
+                            <p class="font-semibold">Your First Digital Task</p>
+                            <p class="text-gray-500">Guiding the user to open a simple text editor and type their name
+                                and a few sentences.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                        <div>
+                            <p class="font-semibold">Building Confidence</p>
+                            <p class="text-gray-500">Ending the session with an encouraging note about the learning
+                                journey.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card border-l-4 border-[#FF6B6B]">
+                <h3 class="text-2xl font-bold text-[#073B4C] mb-4">Month 1: The Core Fundamentals</h3>
+                <p class="text-gray-600 mt-2">Learn the basics of computer hardware, software, and file organization.
+                </p>
+                <div class="mt-4 space-y-4">
+                    <h4 class="text-xl font-bold text-[#FF6B6B]">Week 1: Introduction to Computer Hardware</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 1: What is a Computer?</p>
+                                <p class="text-gray-500">The basic definition of a computer and its primary purpose.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 2: The Physical Parts</p>
+                                <p class="text-gray-500">Identifying and understanding the function of the monitor,
+                                    keyboard, mouse, and CPU.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 3: Hardware vs. Software</p>
+                                <p class="text-gray-500">A clear distinction between the physical components and the
+                                    programs that run on them.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#FF6B6B]">Week 2: Operating System & Navigation</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 4: The Operating System (OS)</p>
+                                <p class="text-gray-500">What an OS is and why it's the "brain" of the computer.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 5: Mastering the Mouse & Touchpad</p>
+                                <p class="text-gray-500">In-depth practice on clicking, dragging, and scrolling.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 6: Desktop & Taskbar</p>
+                                <p class="text-gray-500">Navigating the home screen, opening programs from the taskbar,
+                                    and understanding icons.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#FF6B6B]">Week 3: Files & Folders</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 7: The Concept of Files</p>
+                                <p class="text-gray-500">Understanding different file types like documents, pictures,
+                                    and videos.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 8: Organizing with Folders</p>
+                                <p class="text-gray-500">Creating, naming, and nesting folders to keep your digital
+                                    world tidy.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 9: File Management</p>
+                                <p class="text-gray-500">Copying, moving, renaming, and deleting files.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#FF6B6B]">Week 4: Basic Applications</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 10: Using a Text Editor</p>
+                                <p class="text-gray-500">Practical experience with a simple program like Notepad or
+                                    TextEdit.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 11: The Calculator & Clock</p>
+                                <p class="text-gray-500">Learning to use built-in tools for everyday tasks.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FF6B6B] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 12: Exploring the Photos App</p>
+                                <p class="text-gray-500">Viewing and organizing digital images.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card border-l-4 border-[#FFD166]">
+                <h3 class="text-2xl font-bold text-[#073B4C] mb-4">Month 2: Digital Productivity</h3>
+                <p class="text-gray-600 mt-2">Dive into word processing, spreadsheets, presentations, and mastering
+                    online communication.</p>
+                <div class="mt-4 space-y-4">
+                    <h4 class="text-xl font-bold text-[#FFD166]">Week 5: The Internet & Web Browsing</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 13: What is the Internet?</p>
+                                <p class="text-gray-500">Explaining the concept of the World Wide Web and how to get
+                                    online.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 14: Navigating a Browser</p>
+                                <p class="text-gray-500">Understanding the address bar, tabs, and bookmarks.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 15: Effective Searching</p>
+                                <p class="text-gray-500">How to use search engines like Google to find information.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#FFD166]">Week 6: Email Mastery</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 16: Setting Up an Email Account</p>
+                                <p class="text-gray-500">A step-by-step guide to creating your first email address.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 17: Sending & Receiving</p>
+                                <p class="text-gray-500">Composing, sending, and replying to emails.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 18: Attachments & Organization</p>
+                                <p class="text-gray-500">How to send files and keep your inbox organized.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#FFD166]">Week 7: Word Processing</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 19: Typing & Saving</p>
+                                <p class="text-gray-500">Creating a new document and saving your work properly.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 20: Formatting Text</p>
+                                <p class="text-gray-500">Using bold, italics, underline, and changing font styles.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 21: Creating Lists & Tables</p>
+                                <p class="text-gray-500">Organizing information with bullet points, numbered lists, and
+                                    simple tables.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#FFD166]">Week 8: Spreadsheets & Presentations</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 22: Simple Spreadsheets</p>
+                                <p class="text-gray-500">Understanding rows, columns, and entering basic data for
+                                    budgets or lists.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 23: Introduction to Presentations</p>
+                                <p class="text-gray-500">Creating a basic slideshow with text and images.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#FFD166] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 24: Sharing & Collaboration</p>
+                                <p class="text-gray-500">How to share your documents and work with others online.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card border-l-4 border-[#06D6A0]">
+                <h3 class="text-2xl font-bold text-[#073B4C] mb-4">Month 3: The Connected Expert</h3>
+                <p class="text-gray-600 mt-2">Explore advanced topics like AI, digital security, social media, and
+                    troubleshooting.</p>
+                <div class="mt-4 space-y-4">
+                    <h4 class="text-xl font-bold text-[#06D6A0]">Week 9: Digital Security & Privacy</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 25: The Importance of Passwords</p>
+                                <p class="text-gray-500">Why strong passwords are essential and how to create them.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 26: Recognizing Threats</p>
+                                <p class="text-gray-500">Identifying common scams like phishing emails and malicious
+                                    websites.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 27: Protecting Your Privacy</p>
+                                <p class="text-gray-500">Understanding what information you should and should not share
+                                    online.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#06D6A0]">Week 10: Introduction to AI</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 28: What is AI?</p>
+                                <p class="text-gray-500">A simple, non-technical explanation of what Artificial
+                                    Intelligence is and how it's used.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 29: AI Assistants</p>
+                                <p class="text-gray-500">Exploring how to use tools like Google Assistant or Siri to get
+                                    answers.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 30: Using Generative AI</p>
+                                <p class="text-gray-500">Practical demonstration of using a chatbot to write a paragraph
+                                    or summarize an article.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#06D6A0]">Week 11: Social Media & Video Calls</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 31: Introduction to Social Media</p>
+                                <p class="text-gray-500">A look at popular platforms and the basics of setting up a
+                                    profile.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 32: Safety on Social Media</p>
+                                <p class="text-gray-500">How to manage privacy settings and interact respectfully
+                                    online.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 33: Video Calls</p>
+                                <p class="text-gray-500">How to join a video meeting, mute your microphone, and share
+                                    your screen.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-bold text-[#06D6A0]">Week 12: Troubleshooting & Maintenance</h4>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 34: My Computer is Slow</p>
+                                <p class="text-gray-500">Common causes and simple solutions like closing apps or
+                                    restarting.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 35: The Internet Isn't Working</p>
+                                <p class="text-gray-500">A simple process for checking cables, restarting the router,
+                                    and other fixes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl font-bold text-[#06D6A0] mr-4">&#x2022;</span>
+                            <div>
+                                <p class="font-semibold">Class 36: Final Review & Next Steps</p>
+                                <p class="text-gray-500">A full recap of all skills learned and a discussion on future
+                                    goals.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-16 pt-8 border-t">
+            <h2 class="text-2xl font-bold text-[#073B4C] mb-4">Contact & Support</h2>
+            <p class="text-gray-500 mb-4">Reach out to me for more information or to book your first class!</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:95roshan1@gmail.com"
+                    class="bg-[#118AB2] text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-[#06D6A0] transition duration-300 transform hover:scale-105"
+                    target="_blank">
+                    <i class="fas fa-envelope mr-2"></i> 95roshan1@gmail.com
+                </a>
+                <a href="tel:+919958262209"
+                    class="bg-[#FFD166] text-[#073B4C] font-bold py-3 px-6 rounded-full shadow-lg hover:bg-[#FF6B6B] transition duration-300 transform hover:scale-105"
+                    target="_blank">
+                    <i class="fas fa-phone mr-2"></i> +91 9958262209
+                </a>
+                <button id="openModalBtn"
+                    class="bg-[#FF6B6B] text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-[#FFD166] transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-coffee mr-2"></i> Buy Me a Coffee
+                </button>
+            </div>
+            <div class="mt-8 flex justify-center space-x-6 text-gray-600">
+                <a href="https://www.linkedin.com/in/roshanchaudhary/" target="_blank"
+                    class="text-2xl hover:text-[#118AB2] transition-colors duration-200">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/theroshanron" target="_blank"
+                    class="text-2xl hover:text-[#FF6B6B] transition-colors duration-200">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/theroshanron" target="_blank"
+                    class="text-2xl hover:text-[#FFD166] transition-colors duration-200">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://wa.me/919958262209" target="_blank"
+                    class="text-2xl hover:text-[#06D6A0] transition-colors duration-200">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm mt-4">For the best experience, please replace all placeholder links with
+                your actual information.</p>
+        </footer>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="qrModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalBtn">&times;</span>
+            <h3 class="text-xl font-bold mb-4">Buy Me a Coffee</h3>
+            <p class="text-gray-600 mb-4">Scan to pay with any UPI app</p>
+            <img src="unnamed.png" alt="UPI QR Code" class="mx-auto w-64 h-64 mb-4">
+            <p class="text-gray-600">UPI ID: 95roshan1-2@okhdfcbank</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const qrModal = document.getElementById('qrModal');
+
+            openModalBtn.onclick = function () {
+                qrModal.style.display = "flex";
+            }
+
+            closeModalBtn.onclick = function () {
+                qrModal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == qrModal) {
+                    qrModal.style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
